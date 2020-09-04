@@ -12,16 +12,12 @@ class BlogIndex extends React.Component {
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
     const { currentPage, numPages } = this.props.pageContext
-    const isFirst = currentPage === 1
-    const isLast = currentPage === numPages
-    const prevPage = currentPage - 1 === 1 ? '/' : (currentPage - 1).toString()
-    const nextPage = (currentPage + 1).toString()
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title={siteTitle}
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          keywords={[`blog`, `gatsby`, `javascript`, `react`, 'dev', 'programming', 'tutorial']}
         />
         <Bio />
         {posts.map(({ node }) => {
@@ -33,7 +29,7 @@ class BlogIndex extends React.Component {
                   marginBottom: rhythm(1 / 4),
                 }}
               >
-                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+                <Link style={{ boxShadow: 'none', color: '#80011F'}} to={node.fields.slug}>
                   {title}
                 </Link>
               </h3>
@@ -46,17 +42,12 @@ class BlogIndex extends React.Component {
           style={{
             display: 'flex',
             flexWrap: 'wrap',
-            justifyContent: 'space-between',
+            justifyContent: 'center',
             alignItems: 'center',
             listStyle: 'none',
             padding: 0,
           }}
         >
-          {!isFirst && (
-            <Link to={prevPage} rel="prev">
-              ← Previous Page
-            </Link>
-          )}
           {Array.from({ length: numPages }, (_, i) => (
             <li
               key={`pagination-number${i + 1}`}
@@ -70,18 +61,13 @@ class BlogIndex extends React.Component {
                   padding: rhythm(1 / 4),
                   textDecoration: 'none',
                   color: i + 1 === currentPage ? '#ffffff' : '',
-                  background: i + 1 === currentPage ? '#007acc' : '',
+                  background: i + 1 === currentPage ? '#80011F' : '',
                 }}
               >
                 {i + 1}
               </Link>
             </li>
           ))}
-          {!isLast && (
-            <Link to={nextPage} rel="next">
-              Next Page →
-            </Link>
-          )}
         </ul>
       </Layout>
     )

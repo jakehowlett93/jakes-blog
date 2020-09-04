@@ -1,15 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Paginated Blog',
-    author: 'Kyle Mathews',
+    title: 'Jake Howlett Developer Blog.',
+    author: 'Jake Howlett',
     description:
-      'A paginated starter blog demonstrating what Gatsby can do. Extension of gatsby-starter-blog.',
+      'A personal blog for improving my understanding of code.',
     siteUrl: 'https://nickymeuleman.github.io/gatsby-paginated-blog/',
     social: {
-      twitter: `kylemathews`,
+      twitter: `change this to linkdin gh and p`, //TODO
+      github: 'jakehowlett93',
+      linkedin: 'jake-howlett-b48a66a6'
     },
   },
-  pathPrefix: '/gatsby-paginated-blog',
+  pathPrefix: '/jake-howlett-blog',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,

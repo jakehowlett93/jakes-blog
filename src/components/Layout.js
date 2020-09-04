@@ -68,9 +68,9 @@ class Layout extends React.Component {
         {header}
         {children}
         <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <p style={{fontWeight: 'bold', textAlign: 'center'}}>
+            Contact me via Jake.howlett93@gmail.com
+          </p>
         </footer>
       </div>
     )
