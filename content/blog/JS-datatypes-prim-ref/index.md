@@ -6,13 +6,13 @@ date: '2020-09-16T11:39:00'
 ### key points:
 #### Primitive Types:
 Variables store a literal value, types include:
-- undefined
-- null
-- boolean
-- number
-- bigint
-- string
-- symbol
+- Undefined
+- Null
+- Boolean
+- Number
+- Bigint
+- String
+- Symbol
 
 #### Referential Types:
 Variables store the address of the object, types include:
