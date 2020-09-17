@@ -43,7 +43,7 @@ function Bio() {
               </a>
               <a href={`https://twitter.com/${social.twitter}`} style={{boxShadow: 'none'}}>
                 <Image 
-                fixed={data.linkedinIcon.childImageSharp.fixed}
+                fixed={data.twitterIcon.childImageSharp.fixed}
                 title="Twitter"
                 alt="Twitter Icon"
                 />
@@ -88,11 +88,20 @@ const bioQuery = graphql`
         }
       }
     }
+    twitterIcon: file(absolutePath: { regex: "/twitter-icon.png/" }) {
+      childImageSharp {
+        fixed(width: 28, height: 28) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
     site {
       siteMetadata {
         author
         social {
-          twitter
+          twitter,
+          github,
+          linkedin
         }
       }
     }
