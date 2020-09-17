@@ -6,9 +6,9 @@ module.exports = {
       'A personal blog for improving my understanding of code.',
     siteUrl: 'https://nickymeuleman.github.io/gatsby-paginated-blog/',
     social: {
-      twitter: `change this to linkdin gh and p`, //TODO
-      github: 'jakehowlett93',
-      linkedin: 'jake-howlett-b48a66a6'
+      twitter: `JakeHWebDev`,
+      github: `jakehowlett93`,
+      linkedin: `jake-howlett-b48a66a6`
     },
   },
   pathPrefix: '/jake-howlett-blog',
@@ -68,7 +68,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/favicon.png`,
       },
     },
     `gatsby-plugin-offline`,

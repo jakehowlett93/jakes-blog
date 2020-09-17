@@ -27,18 +27,25 @@ function Bio() {
                   borderRadius: `100%`,
                 }}
               />
-              <a href={`https://twitter.com/${social.twitter}`} style={{boxShadow: 'none'}}>
+              <a href={`https://github.com/jakehowlett93`} style={{boxShadow: 'none'}}>
                 <Image 
                 fixed={data.githubIcon.childImageSharp.fixed}
                 title="GitHub: jakehowlett93"
                 alt="GitHub Icon"
                 />
               </a>
-              <a href={`https://twitter.com/${social.twitter}`} style={{boxShadow: 'none', paddingLeft: rhythm(3/8)}}>
+              <a href={`https://www.linkedin.com/in/jake-howlett-b48a66a6/`} style={{boxShadow: 'none', paddingLeft: rhythm(3/8)}}>
                 <Image 
                 fixed={data.linkedinIcon.childImageSharp.fixed}
                 title="LinkedIn"
                 alt="LinkedIn Icon"
+                />
+              </a>
+              <a href={`https://twitter.com/${social.twitter}`} style={{boxShadow: 'none'}}>
+                <Image 
+                fixed={data.linkedinIcon.childImageSharp.fixed}
+                title="Twitter"
+                alt="Twitter Icon"
                 />
               </a>
             </div>
